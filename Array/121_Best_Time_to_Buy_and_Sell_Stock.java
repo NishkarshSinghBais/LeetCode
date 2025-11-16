@@ -1,4 +1,4 @@
-Brute Force : Time O(n)
+// Brute Force : Time O(n)
 
 class Solution {
     public int maxProfit(int[] prices) {
