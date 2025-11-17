@@ -1,3 +1,5 @@
+// https://www.geeksforgeeks.org/problems/subset-sums2234/1
+
 class Solution {
     public ArrayList<Integer> subsetSums(int[] arr) {
         // code here

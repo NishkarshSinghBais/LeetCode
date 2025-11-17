@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/maximize-expression-of-three-elements/description/
+
 class Solution {
     public int maximizeExpressionOfThree(int[] nums) {
 
