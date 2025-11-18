@@ -3,12 +3,10 @@
 class Solution {
     public int maximizeExpressionOfThree(int[] nums) {
 
-        // 'a' = largest number
-        // 'b' = second largest number
+
         int a = Integer.MIN_VALUE;
         int b = Integer.MIN_VALUE;
 
-        // 'c' = smallest number
         int c = Integer.MAX_VALUE;
 
         // Traverse all numbers once (O(n))
