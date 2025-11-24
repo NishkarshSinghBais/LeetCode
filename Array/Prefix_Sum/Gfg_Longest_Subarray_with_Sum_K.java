@@ -49,6 +49,30 @@ class Solution {
     }
 }
 
+// If Arrays Contains only Positives - Sliding Window O(n) Approach
+
+class Solution {
+    public int longestSubarray(int[] arr, int k) {
+        // code here
+        int i = 0; int j=0; int sum = 0; int length = 0;
+
+        while ( j<arr.length ){
+            sum += arr[j];
+
+            if ( sum == k ){
+                length = Math.max(length, j-i+1);
+            }
+
+            while ( sum > k ){
+                sum -= arr[i];
+                i++;
+            }
+            j++;
+        }
+        return length;
+    }
+}
+
 
 
 
