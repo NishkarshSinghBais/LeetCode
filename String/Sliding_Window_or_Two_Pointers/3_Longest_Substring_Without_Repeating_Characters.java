@@ -1,3 +1,4 @@
+// https://www.geeksforgeeks.org/problems/longest-distinct-characters-in-string5848/1
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/
 // Naive One - Time -> O(n)cube
 
@@ -14,7 +15,6 @@ class Solution {
         }
         return maxLength;
     }
-
 
     boolean isUnique(String s, int f, int l){
 
