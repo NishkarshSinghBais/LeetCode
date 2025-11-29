@@ -22,6 +22,7 @@ class Solution {
 
 class Solution {
     public int numSubarraysWithSum(int[] nums, int goal) {
+        // to know why this formula work dry run with program flow on [1,0,1] and goal = 1
         return countAtMost(nums, goal) - countAtMost(nums, goal - 1);
     }
     public int countAtMost(int[] nums, int goal){
@@ -47,7 +48,10 @@ class Solution {
                 sum -= nums[i];
                 i++;
             }
-            // Can't check before shrinking
+
+            // add the length to the count
+            // which will give the number of all possible subarrays
+            // Can't update count before shrinking
             // to know why dry run with program flow on [1,0,1] and goal = 1
 
             count += j - i + 1;
