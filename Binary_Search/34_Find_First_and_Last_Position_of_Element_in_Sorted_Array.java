@@ -4,7 +4,14 @@
 
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        int[] arr = {-1, -1};
+        int first = find(nums, target, true);
+        int last = find(nums, target, false);
+
+        return new int[]{first, last};
+    }
+
+    int find(int[] nums, int target, boolean findFirst){
+        int ans = -1;
         int s = 0;
         int e = nums.length-1;
 
@@ -12,30 +19,18 @@ class Solution {
             int m = s + (e-s)/2;
 
             if ( target == nums[m] ){
-                arr[0] = m;
-                e = m - 1;
-            } else if ( target < nums[m] ){
-                e = m - 1;
-            } else {
+                ans = m;
+                if ( (findFirst) ){
+                    e = m - 1;
+                } else {
+                    s = m + 1;
+                }
+            } else if ( target > nums[m] ){
                 s = m + 1;
+            } else {
+                e = m - 1;
             }
         }
-        // Reset s and e before next loop
-        s = 0;
-        e = nums.length - 1;
-
-        while ( s<=e ){
-            int m = s + (e-s)/2;
-
-            if ( target == nums[m] ){
-                arr[1] = m;
-                s = m + 1;
-            } else if ( target < nums[m] ){
-                e = m - 1;
-            } else {
-                s = m + 1;
-            }
-        }
-        return arr;
+        return ans;
     }
 }
