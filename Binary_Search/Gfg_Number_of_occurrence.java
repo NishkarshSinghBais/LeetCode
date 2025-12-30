@@ -8,7 +8,7 @@ class Solution {
         int first = find(arr, target, true);
         int last = find(arr, target, false);
 
-        if ( first == -1 || last == -1 ){
+        if ( first == -1 ){
             return 0;
         }
 

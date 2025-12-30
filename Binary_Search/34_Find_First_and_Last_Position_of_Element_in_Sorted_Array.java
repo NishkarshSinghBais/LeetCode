@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
 
-// Time logn and constant sapce
+// Time logn and constant space
 
 class Solution {
     public int[] searchRange(int[] nums, int target) {

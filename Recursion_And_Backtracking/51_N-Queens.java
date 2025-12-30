@@ -1,6 +1,7 @@
 // https://leetcode.com/problems/n-queens/description/
 
 // Time Worst (N!)
+
 // Space (S + N * N^2) S = Total solutions, N = max Recursion depth, N^2 = board storage
 
 class Solution {
