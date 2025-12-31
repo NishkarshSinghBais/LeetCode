@@ -22,7 +22,8 @@ class Solution {
 
             // check if middle element is minimum, if so, return it
             if ( arr[m] <= arr[l] && arr[m] <= arr[r]){
-                return m;            }
+                return m;
+            }
             if ( arr[m] <= arr[e] ){
                 e = m - 1;
             } else {
