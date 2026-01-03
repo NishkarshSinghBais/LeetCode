@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/search-a-2d-matrix/description/
+// https://leetcode.com/problems/search-a-2d-matrix-ii/description/
 
 // Time - O(m+n)
 
