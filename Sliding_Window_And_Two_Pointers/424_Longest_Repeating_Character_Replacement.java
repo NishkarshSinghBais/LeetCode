@@ -14,7 +14,7 @@ class Solution {
                 maxFreq = Math.max(maxFreq, freq[s.charAt(j) - 'A']);
 
                 if ( (j - i + 1) - maxFreq <= k ){
-                    maxLength = Math.max(maxLength, j - i + 1);00
+                    maxLength = Math.max(maxLength, j - i + 1);
                 }
             }
         }
