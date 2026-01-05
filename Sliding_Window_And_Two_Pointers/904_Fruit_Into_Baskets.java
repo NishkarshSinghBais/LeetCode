@@ -38,11 +38,9 @@ class Solution {
             }
 
             while ( map.size() > 2 ){
-                if ( map.containsKey(fruits[i]) ){
-                    map.put(fruits[i], map.get(fruits[i]) - 1);
-                    if ( map.get(fruits[i]) == 0 ){
-                        map.remove(fruits[i]);
-                    }
+                map.put(fruits[i], map.get(fruits[i]) - 1);
+                if ( map.get(fruits[i]) == 0 ){
+                    map.remove(fruits[i]);
                 }
                 i++;
             }
