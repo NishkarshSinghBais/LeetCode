@@ -20,7 +20,7 @@ class Solution {
 }
 
 // Better Approach - Prefix Sum
-// Time O(n) and Space - O(N−K+1) - Number of windows
+// Time O(n) and Space - O(n) - Number of windows
 
 class Solution {
     public int longestSubarray(int[] arr, int k) {
