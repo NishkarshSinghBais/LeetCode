@@ -1,9 +1,9 @@
-// https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
+// https://leetcode.com/problems/find-all-duplicates-in-an-array/description/
 
 // Time - O(n)
 
 class Solution {
-    public List<Integer> findDisappearedNumbers(int[] nums) {
+    public List<Integer> findDuplicates(int[] nums) {
         List<Integer> list = new ArrayList<>();
         int n = nums.length;
         int i = 0;
@@ -19,7 +19,7 @@ class Solution {
 
         for (int j=0; j<n; j++){
             if ( nums[j] != j+1 ){
-                list.add(j+1);
+                list.add(nums[j]);
             }
         }
         return list;

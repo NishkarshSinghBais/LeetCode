@@ -1,10 +1,9 @@
-// https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
+// https://leetcode.com/problems/set-mismatch/
 
 // Time - O(n)
 
 class Solution {
-    public List<Integer> findDisappearedNumbers(int[] nums) {
-        List<Integer> list = new ArrayList<>();
+    public int[] findErrorNums(int[] nums) {
         int n = nums.length;
         int i = 0;
 
@@ -16,13 +15,12 @@ class Solution {
                 i++;
             }
         }
-
-        for (int j=0; j<n; j++){
+        for (int j=0; j<nums.length; j++){
             if ( nums[j] != j+1 ){
-                list.add(j+1);
+                return new int[]{nums[j], j+1};
             }
         }
-        return list;
+        return new int[]{-1, -1};
     }
     void swap(int a, int b, int[] nums){
         int temp = nums[a];

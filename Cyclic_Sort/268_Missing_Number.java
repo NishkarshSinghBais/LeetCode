@@ -8,7 +8,7 @@ class Solution {
         int i = 0;
         while ( i < n ){
             int correct = nums[i];
-            if ( correct < n && nums[i] != nums[correct] ){
+            if ( nums[i] < n && nums[i] != nums[correct] ){
                 swap(i, correct, nums);
             } else {
                 i++;
