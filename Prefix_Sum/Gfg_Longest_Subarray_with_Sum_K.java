@@ -31,7 +31,6 @@ class Solution {
 
         for (int i=0; i<arr.length; i++){
             prefixSum += arr[i];
-            // whole subarray has 0 to i sum k
             if ( prefixSum == k ){
                 maxLength = Math.max(maxLength, i + 1);
             }
@@ -40,7 +39,7 @@ class Solution {
                 int length = i - map.get(prefixSum - k);
                 maxLength = Math.max(maxLength, length);
             }
-            // store prefixSum first occurence only and its index (in case of 0s)
+            // store only prefixSum first occurence and its index (in case of 0s)
             if ( !map.containsKey(prefixSum) ){
                 map.put(prefixSum, i);
             }
